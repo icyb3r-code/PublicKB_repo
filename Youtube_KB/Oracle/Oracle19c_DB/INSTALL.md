@@ -79,7 +79,7 @@ If you are not using Oracle Linux and UEK, you will need to manually [disable tr
 Create the directories in which the Oracle software will be installed.
 
 ```
-mkdir -p /u01/app/oracle/product/19.0.0/dbhome_1
+mkdir -p /u01/app/oracle/product/19.3/dbhome_1
 mkdir -p /u02/oradata
 chown -R oracle:oinstall /u01 /u02
 chmod -R 775 /u01 /u02
@@ -104,7 +104,11 @@ mkdir /home/oracle/scripts
 Create an environment file called "setEnv.sh". The "$" characters are escaped using "\". If you are not creating the file with the `cat` command, you will need to remove the escape characters.
 
 ```
+
+## copy this script to your terminal
+
 cat > /home/oracle/scripts/setEnv.sh <<EOF
+
 # Oracle Settings
 export TMP=/tmp
 export TMPDIR=\$TMP
@@ -112,7 +116,7 @@ export TMPDIR=\$TMP
 export ORACLE_HOSTNAME=mydb.localdomain
 export ORACLE_UNQNAME=mydb
 export ORACLE_BASE=/u01/app/oracle
-export ORACLE_HOME=$ORACLE_BASE/product/19.3/dbhome_1
+export ORACLE_HOME=\$ORACLE_BASE/product/19.3/dbhome_1
 export ORA_INVENTORY=/u01/app/oraInventory
 export ORACLE_SID=mydb
 export PDB_NAME=pdb1
@@ -123,6 +127,7 @@ export PATH=\$ORACLE_HOME/bin:\$PATH
 
 export LD_LIBRARY_PATH=\$ORACLE_HOME/lib:/lib:/usr/lib
 export CLASSPATH=\$ORACLE_HOME/jlib:\$ORACLE_HOME/rdbms/jlib
+
 EOF
 ```
 
