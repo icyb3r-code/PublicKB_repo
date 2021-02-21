@@ -67,16 +67,14 @@ Once the change is complete, restart the server or run the following command.
 # setenforce Permissive
 ```
 
-If you have the Linux firewall enabled, you will need to disable or configure it, as shown [here](https://oracle-base.com/articles/linux/linux-firewall-firewalld). To disable it, do the following.
+If you have the Linux firewall enabled, you will need to disable or configure it, To disable it, do the following.
 
 ```
 # systemctl stop firewalld
 # systemctl disable firewalld
 ```
 
-If you are not using Oracle Linux and UEK, you will need to manually [disable transparent huge pages](https://oracle-base.com/articles/linux/configuring-huge-pages-for-oracle-on-linux-64#disabling-transparent-hugepages).
-
-Create the directories in which the Oracle software will be installed.
+ICreate the directories in which the Oracle software will be installed.
 
 ```
 mkdir -p /u01/app/oracle/product/19.3/dbhome_1
