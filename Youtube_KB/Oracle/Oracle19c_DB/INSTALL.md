@@ -149,7 +149,7 @@ Download from host to vm oracle Linux 8 using this way , you can do the same usi
 $ python3 -m http.server 8888
 
 # On Oracle linux 8 download 
-$ wget http://10.10.20.1:8888/{file_name}.zip
+$ wget http://{your_host_ip}:8888/{file_name}.zip
 ```
 
 **ORACLE Linux xhost**
