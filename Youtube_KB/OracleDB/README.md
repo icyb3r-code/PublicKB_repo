@@ -2,8 +2,8 @@
 
 
 
-This part of repo is for oracle 12c and all the denouements belong to it
+Index for Oracle topics:
 
-*  [Migrate oracle 12c Standard Edtion to Enterprise Edition](./SE_2_EE.md)
+*  [Convert oracle Standard Edtion to Enterprise Edition](./Convert_Oracle_DB_from_SE_2_EE.md)
 *  [Oracle Database 19c 19.3 SingleInstance installation steps Doc](./Install_Oracle19c_SingleInstance.md)
 *  [Oracle 19c DataGuard Configuration DOC](./Oracle19c_DataGuard_configuration.md)

@@ -1,0 +1,40 @@
+
+################# apply rac1 and rac2 #####################
+user:   root
+
+
+1- grid/rpm
+
+         rpm -Uvh cvuqdisk-1.0.9-1.rpm
+
+2- install 
+
+		kmod-oracleasm-2.0.8-17.0.1.el7.x86_64.rpm
+    
+3- install 
+
+		http://www.oracle.com/technetwork/server-storage/linux/asmlib/ol7-2352094.html
+        rpm -Uvh oracleasmlib-2.0.12-1.el7.x86_64.rpm
+
+4- install 
+
+        rpm -Uvh oracleasm-support-2.1.8-3.1.el7.x86_64.rpm
+		
+rpm -qa | grep asm
+
+modinfo oracleasm
+
+
+5- apply this in root user for both nodes:
+
+cd /etc/ini.d/
+
+./oracleasm configure 
+
+./oracleasm init
+
+./oracleasm createdisk ASMDISK01 /dev/sdb1 and so on 
+
+oracleasm scandisks 
+oracleasm listdisks 
+

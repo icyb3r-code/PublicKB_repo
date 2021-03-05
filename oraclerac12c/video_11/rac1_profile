@@ -1,0 +1,55 @@
+###################### Log in as the "oracle" user and add the following lines at the end of the "/home/oracle/.bash_profile" file. #################
+
+# Oracle Settings
+export TMP=/tmp
+export TMPDIR=$TMP
+
+export ORACLE_HOSTNAME=rac1.racdomain
+export ORACLE_UNQNAME=CDBRAC
+export ORACLE_BASE=/u01/app/oracle
+export GRID_HOME=/u01/app/12.1.0.2/grid
+export DB_HOME=$ORACLE_BASE/product/12.1.0.2/db_1
+export ORACLE_HOME=$DB_HOME
+export ORACLE_SID=cdbrac1
+export ORACLE_TERM=xterm
+export BASE_PATH=/usr/sbin:$PATH
+export PATH=$ORACLE_HOME/bin:$BASE_PATH
+
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib:/lib:/usr/lib
+export CLASSPATH=$ORACLE_HOME/JRE:$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib
+
+alias grid_env='. /home/oracle/grid_env'
+alias db_env='. /home/oracle/db_env'
+
+
+
+
+#############################Create a file called "/home/oracle/grid_env" with the following contents. ########################
+
+export ORACLE_SID=+ASM1
+export ORACLE_HOME=$GRID_HOME
+export PATH=$ORACLE_HOME/bin:$BASE_PATH
+
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib:/lib:/usr/lib
+export CLASSPATH=$ORACLE_HOME/JRE:$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib
+
+
+############################## Create a file called "/home/oracle/db_env" with the following contents. ##########################
+
+export ORACLE_SID=cdbrac1
+export ORACLE_HOME=$DB_HOME
+export PATH=$ORACLE_HOME/bin:$BASE_PATH
+
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib:/lib:/usr/lib
+export CLASSPATH=$ORACLE_HOME/JRE:$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib
+
+
+Once the "/home/oracle/.bash_profile" has been run, you will be able to switch between environments as follows.
+
+$ grid_env
+$ echo $ORACLE_HOME
+/u01/app/12.1.0.2/grid
+$ db_env
+$ echo $ORACLE_HOME
+/u01/app/oracle/product/12.1.0.2/db_1
+$
