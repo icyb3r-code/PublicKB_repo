@@ -17,8 +17,6 @@ If you are using the Standard Edition of the Oracle Database and want to move to
   ./runInstaller -deinstall -home /u01/app/oracle/product/12.2.0.1/db_1/
   ```
 
-  
-
 - Install the Enterprise Edition server software using the Oracle Universal Installer.
 
 - Select the same Oracle home that was used for the de-installed  Standard Edition. During the installation, be sure to select the  Enterprise Edition.
