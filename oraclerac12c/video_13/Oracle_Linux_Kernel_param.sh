@@ -2,7 +2,7 @@
 
 cat >> /etc/sysctl.conf <<EOL
 
-########################## Added By Ibrahim ################
+########################## Added By ICyb3r ################
 
 fs.file-max = 6815744
 kernel.sem = 250 32000 100 128
@@ -28,7 +28,7 @@ cat /etc/sysctl.conf
 
 cat >> /etc/security/limits.d/20-nproc.conf <<EOL
 
-###################### Added By Ibrahim ##################
+###################### Added By ICyb3r ##################
 
 oracle   soft   nofile    1024
 oracle   hard   nofile    65536

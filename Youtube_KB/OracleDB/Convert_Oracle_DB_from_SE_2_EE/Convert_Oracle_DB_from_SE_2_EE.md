@@ -77,3 +77,9 @@ For example, if your Standard  Edition server software is release 12.2.0.1.0, th
 
 **You can verify current edition of the oracle database by connecting to the database or by querying the v$banner view.**
 
+
+
+
+
+
+
