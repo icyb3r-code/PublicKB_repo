@@ -305,7 +305,7 @@ then we need to run the setup script to start the installation.
 
 change the discovery path as shown below:
 
-![image-20210318123531045](../Oracle19c_With_ASM.assets/image-20210318123531045.png)
+![image-20210318123531045](/Oracle19c_With_ASM.assets/image-20210318123531045.png)
 
 fill the windows same as below 
 
